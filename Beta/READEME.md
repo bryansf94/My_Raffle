@@ -1,0 +1,3 @@
+# READEME
+
+Este é o código do meu primeiro projeto em HTML, que desenvolvi para criar um "site" de rifa para minha esposa. Este projeto é muito especial para mim, pois a motivação por trás dele é o amor e a dedicação que tenho pela minha esposa. Cada linha de código reflete meu empenho em criar algo significativo e funcional para apoiá-la. Embora não seja nada demais, este é o pontapé inicial para um projetinho um pouco maior.
