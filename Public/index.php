@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" href="\img\icone.png" type="image/x-icon">
   <link rel="stylesheet" href="css/Styles_index.css">
+  <link rel="stylesheet" href="css/reset.css">
 <title>Home Page - My Riffle</title>
 </head>
 <body>

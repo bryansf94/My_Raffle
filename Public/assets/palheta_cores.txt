@@ -1,0 +1,9 @@
+
+As paletas de cores hexadecimais extraídas da imagem são:
+
+#181032 (um tom de azul escuro)
+#c8984e (um tom de dourado)
+#c332bb (um tom de rosa/magenta)
+#ddcde3 (um tom de rosa claro)
+#3588ca (um tom de azul)
+#4d2a7f (um tom de roxo) ​
