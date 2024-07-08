@@ -20,6 +20,7 @@
   <main>
     <section class="container-banner">
       <div class="container-banner">
+        <div class="container">
         <img src="img/logo-banner.png" class="logo" alt="logo-banner">
       </div>
 
