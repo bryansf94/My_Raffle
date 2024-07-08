@@ -1,12 +1,39 @@
+
 .logo{
     width:460px;
     margin-left:340px; /* mova 20px para a direita */
     margin-top: 10px; /* mova 10px para baixo */
 }
 
+
 body {
     background-color: #050404;
     font-family: 'Arial', sans-serif;
+    
+}
+/* Estilos para dispositivos móveis */
+body {
+    font-size: 14px;
+}
+
+/* Estilos para tablets */
+@media (min-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+/* Estilos para desktops */
+@media (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
 }
 
 main{
