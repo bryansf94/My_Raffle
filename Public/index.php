@@ -15,17 +15,6 @@
   <link rel="stylesheet" href="css/Styles_index.css">
   <link rel="stylesheet" href="css/reset.css">
 <title>Home Page - My Riffle</title>
-<style>
- * {
-    margin: 0;
-  }
-@media(max-width: 1200px){
-  section {
-    width:1000px;
-  }
-}
-
-</style>
 </head>
 <body>
   <main>
@@ -34,9 +23,6 @@
         <div class="container">
         <img src="img/logo-banner.png" class="logo" alt="logo-banner">
       </div>
-
-
-
 <h1>My First Headffffing</h1>
 <p>My first paragraph.</p>
 </main>
