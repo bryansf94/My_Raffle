@@ -1,54 +1,31 @@
 
-.logo{
-    width:460px;
-    margin-left:340px; /* mova 20px para a direita */
-    margin-top: 10px; /* mova 10px para baixo */
+.logo {
+    width: 460px;
+    position: absolute;
+    left:190px; 
+    top: 250px; 
+    border: 10px solid #0ef; /* Adiciona uma borda azul de 2px */
+    outline: none;
+    border-radius: 5px;
+    padding: 200px; /* Adiciona um espaço de 10px entre o conteúdo e a borda */
+    box-shadow: 0 0 20px #0ef, inset 0 0 #0ef;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 16px;
-}
-
-main{
+main {
     height: 100vh;
 }
 
-.container-banner{
-    width: 100%;
-    height:100%;
-    background-image: url("../img/banner.jpg");
-    background-position: center left;
-    background-repeat: no-repeat;
-    display: flex;
+.container-login {
+    width: 10px;
+    position: absolute;
+    left: 100px; 
+    top: 900px; 
+}
+
+body {
+    background-color: #000000;
+    font-family: 'Arial', sans-serif;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* garante que nada saia do contêiner */
-    position: relative; /* necessário para posicionamento absoluto */
-
-}
-
-body {
-    background-color: #050404;
-    font-family: 'Arial', sans-serif;
-    
-}
-/* Estilos para dispositivos móveis */
-body {
-    font-size: 14px;
-}
-
-/* Estilos para tablets */
-@media (min-width: 768px) {
-    body {
-        font-size: 16px;
-    }
-}
-
-/* Estilos para desktops */
-@media (min-width: 1024px) {
-    body {
-        font-size: 18px;
-    }
+    min-height: 100vh;
 }

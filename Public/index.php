@@ -18,11 +18,11 @@
 </head>
 <body>
   <main>
-    <section class="container-banner">
       <div class="container-banner">
-        <div class="container">
         <img src="img/logo-banner.png" class="logo" alt="logo-banner">
       </div>
+      <div class="container-login">
+      <img src="img/login-icone.png" class="conatiner-login" alt="login-icone">
 <h1>My First Headffffing</h1>
 <p>My first paragraph.</p>
 </main>
