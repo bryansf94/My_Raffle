@@ -2,25 +2,38 @@
 .logo {
     width: 460px;
     position: absolute;
-    left:190px; 
-    top: 250px; 
+    left:179px; 
+    top: 95px; 
     border: 10px solid #0ef; /* Adiciona uma borda azul de 2px */
     outline: none;
     border-radius: 5px;
     padding: 200px; /* Adiciona um espaço de 10px entre o conteúdo e a borda */
     box-shadow: 0 0 20px #0ef, inset 0 0 #0ef;
+    animation: neon 5s infinite alternate; /* Aplica a animação */
 }
-
-main {
-    height: 100vh;
-}
+@keyframes neon {
+    0%, 100% {
+      box-shadow: 0 0 20px #0ef, inset 0 0 20px #0ef;
+      border-color: #0ef;
+    }
+    50% {
+      box-shadow: 0 0 30px rgb(131, 237, 211), inset 0 0 30px #0ef;
+      border-color: rgb(0, 157, 255);
+    }
+  }
 
 .container-login {
-    width: 10px;
+    width: 400px; /* Define a largura da imagem */
+    height: 150px; /* Define a altura da imagem */
     position: absolute;
-    left: 100px; 
-    top: 900px; 
+    left: 105px; 
+    top: 815px; 
 }
+.container-login img {
+    width: 100%; /* A largura da imagem será 100% do container */
+    height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+  }
+
 
 body {
     background-color: #000000;
@@ -28,4 +41,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+}
+main {
+    height: 100vh;
 }
