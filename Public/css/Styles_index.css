@@ -1,7 +1,15 @@
 
+body {
+    display: flex;
+    background-color: #000000;
+    font-family: 'Arial', sans-serif;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 .container-logo {
     width: 460px;
-    position: absolute;
+    /*position: absolute; */
     left:179px; 
     top: 95px; 
     border: 10px solid #0ef; /* Adiciona uma borda azul de 2px */
@@ -17,7 +25,7 @@
     width: 460px;
     left:519px; 
     top: -205px; 
-    position: absolute;
+    /*position: absolute; */
 	font-family: 'Versus Medium';
     font-weight: bold; /* Adiciona negrito ao texto */
     font-size: 19px; /* Aumente este valor para aumentar o tamanho da fonte */
@@ -64,14 +72,6 @@ animation: neonGlow 1.5s infinite alternate;
     height: auto; /* A altura será ajustada automaticamente para manter a proporção */
   }
 
-
-body {
-    background-color: #000000;
-    font-family: 'Arial', sans-serif;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
 main {
     height: 100vh;
 }
