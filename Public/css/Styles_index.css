@@ -1,5 +1,5 @@
 
-.logo {
+.container-logo {
     width: 460px;
     position: absolute;
     left:179px; 
@@ -11,17 +11,47 @@
     box-shadow: 0 0 20px #0ef, inset 0 0 #0ef;
     animation: neon 5s infinite alternate; /* Aplica a animação */
 }
-@keyframes neon {
-    0%, 100% {
-      box-shadow: 0 0 20px #0ef, inset 0 0 20px #0ef;
-      border-color: #0ef;
-    }
-    50% {
-      box-shadow: 0 0 30px rgb(131, 237, 211), inset 0 0 30px #0ef;
-      border-color: rgb(0, 157, 255);
-    }
-  }
 
+.texto-logo {
+    margin: 100;
+    width: 460px;
+    left:519px; 
+    top: -205px; 
+    position: absolute;
+	font-family: 'Versus Medium';
+    font-weight: bold; /* Adiciona negrito ao texto */
+    font-size: 19px; /* Aumente este valor para aumentar o tamanho da fonte */
+    text-shadow: 0 0 2px rgba(0, 0, 255, 0.7); /* Efeito de sombra para replicar o estilo da imagem */
+    color: #fff;
+    transform: translate(-50%, -50%); /* Centraliza o texto */
+    text-align: center; /* Centraliza o texto dentro do elemento */
+    text-shadow: 
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 40px #0ff,
+    0 0 80px #0ff;
+animation: neonGlow 1.5s infinite alternate;
+   
+}
+@keyframes neonGlow {
+    from {
+        text-shadow: 
+            0 0 5px #0ff,
+            0 0 4px #0ff,
+            0 0 10px #0ff,
+            0 0 12px #0ff,
+            0 0 20px #0ff;
+    }
+    to {
+        text-shadow: 
+            0 0 10px #0ff,
+            0 0 14px #0ff,
+            0 0 20px #0ff,
+            0 0 30px #0ff,
+            0 0 34px #0ff;
+    }
+}
 .container-login {
     width: 400px; /* Define a largura da imagem */
     height: 150px; /* Define a altura da imagem */
@@ -45,3 +75,14 @@ body {
 main {
     height: 100vh;
 }
+
+@keyframes neon {
+    0%, 100% {
+      box-shadow: 0 0 20px #0ef, inset 0 0 20px #0ef;
+      border-color: #0ef;
+    }
+    50% {
+      box-shadow: 0 0 30px rgb(131, 237, 211), inset 0 0 30px #0ef;
+      border-color: rgb(0, 157, 255);
+    }
+  }
