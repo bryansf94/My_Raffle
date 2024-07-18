@@ -8,10 +8,10 @@ body {
     min-height: 100vh;
 }
 .container-logo {
+    margin-left: 11.5px; /* Ajuste conforme necessário */
+    align-items: center;
+    justify-content: center;
     width: 460px;
-    /*position: absolute; */
-    left:179px; 
-    top: 95px; 
     border: 10px solid #0ef; /* Adiciona uma borda azul de 2px */
     outline: none;
     border-radius: 5px;
@@ -20,12 +20,15 @@ body {
     animation: neon 5s infinite alternate; /* Aplica a animação */
 }
 
+.container {
+    justify-content: center; /* Centraliza horizontalmente */
+    height: 90vh; /* Altura do contêiner, ajuste conforme necessário */
+}
+
 .texto-logo {
-    margin: 100;
     width: 460px;
-    left:519px; 
-    top: -205px; 
-    /*position: absolute; */
+    margin-left: 445px; /* Ajuste conforme necessário */
+    margin-top: -100px; /* Ajuste conforme necessário */
 	font-family: 'Versus Medium';
     font-weight: bold; /* Adiciona negrito ao texto */
     font-size: 19px; /* Aumente este valor para aumentar o tamanho da fonte */

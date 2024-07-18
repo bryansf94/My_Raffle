@@ -19,11 +19,12 @@
 <body>
   <main>
       <img src="img/logo-banner.png" class="container-logo" alt="logo-banner">
-      </div>
+      <div class="container">
+      <div class="texto-logo">
+      <h1>- Bem vindo ao MyRiffle! Voce está com sorte hoje?- </h1>  
       <div class="container-login">
       <img src="img/login-icone.png" class="conatiner-login" alt="login-icone">
-      <div class="container-banner">
-      <h1 class="texto-logo">- Bem vindo ao MyRiffle! Voce está com sorte hoje?- </h1>     
+      </div>  
 </div>
 <p>My first paragraph.</p>
 </main>
