@@ -65,10 +65,10 @@ animation: neonGlow 1.5s infinite alternate;
 }
 .container-login {
     width: 400px; /* Define a largura da imagem */
-    height: 150px; /* Define a altura da imagem */
-    position: absolute;
-    left: 105px; 
-    top: 815px; 
+    height: 10px; /* Define a altura da imagem */
+    margin-left: -80px; /* Ajuste conforme necessário */
+    margin-top: 200px; /* Ajuste conforme necessário */
+   
 }
 .container-login img {
     width: 100%; /* A largura da imagem será 100% do container */
