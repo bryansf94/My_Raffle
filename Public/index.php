@@ -21,13 +21,20 @@
       <img src="img/logo-banner.png" class="container-logo" alt="logo-banner">
       <div class="container">
       <div class="texto-logo">
-      <h1>- Bem vindo ao MyRiffle! Voce está com sorte hoje?- </h1> 
+      <h1>- Bem vindo ao MyRiffle! Você está com sorte hoje?- </h1> 
       </div>  
     <div class="container-login">
     <img src="img/login-icone.png" class="conatiner-login" alt="login-icone">
-    </div>  
+    </div>
+    <div class="container-icon-back_01">
+    <img src="img/icon_back_01.png" class="container-icon-back_01" alt="icon_back_01">
+    </div>
+    <div class="container-icon-back_02">
+    <img src="img/icon_back_02.png" class="container-icon-back_02" alt="icon_back_02">
+    <div class="container-icon-back_03">
+    <img src="img/icon_back_03.png" class="container-icon-back_03" alt="icon_back_03">
+    </div>
 </div>
-<p>My first paragraph.</p>
 </main>
 </body>
 </html>

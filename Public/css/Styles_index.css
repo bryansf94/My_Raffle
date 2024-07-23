@@ -12,17 +12,19 @@ body {
     background-attachment: fixed;
 }
 .container-logo {
+    margin-top: 17.5px; /* Ajuste conforme necessário */
     margin-left: 11.5px; /* Ajuste conforme necessário */
     align-items: center;
     justify-content: center;
+    margin: 10;
     width: 460px;
-    border: 10px solid #0ef; /* Adiciona uma borda azul de 2px */
+    border: 5px solid #0ef; /* Adiciona uma borda azul de 2px */
     outline: none;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 200px; /* Adiciona um espaço de 10px entre o conteúdo e a borda */
     box-shadow: 0 0 20px #0ef, inset 0 0 #0ef;
     animation: neon 5s infinite alternate; /* Aplica a animação */
-    animation: float 28s infinite alternate; /* Aplica a animação */
+   animation: float 20s infinite alternate; /* Aplica a animação */
 
 }
 
@@ -51,24 +53,7 @@ body {
 animation: neonGlow 1.5s infinite alternate;
    
 }
-@keyframes neonGlow {
-    from {
-        text-shadow: 
-            0 0 5px #0ff,
-            0 0 4px #0ff,
-            0 0 10px #0ff,
-            0 0 12px #0ff,
-            0 0 20px #0ff;
-    }
-    to {
-        text-shadow: 
-            0 0 10px #0ff,
-            0 0 14px #0ff,
-            0 0 20px #0ff,
-            0 0 30px #0ff,
-            0 0 34px #0ff;
-    }
-}
+
 .container-login {
     width: 400px; /* Define a largura da imagem */
     height: 10px; /* Define a altura da imagem */
@@ -81,9 +66,50 @@ animation: neonGlow 1.5s infinite alternate;
     height: auto; /* A altura será ajustada automaticamente para manter a proporção */
   }
 
+.container-icon-back_01 {
+    display: flex;
+    margin-left: 200px; /* Ajuste conforme necessário */
+    margin-top: -280px; /* Ajuste conforme necessário */
+    position: relative; /* Necessário para posicionamento em diversas partes da tela */
+    top: 100px; /* Posição inicial fora da tela, acima do topo */
+    animation: chuva 20s linear infinite; /* Tempo e repetição da animação */
+    opacity: 0;
+    width: 80%; /* A largura da imagem será 100% do container */
+    height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+    
+    
+}
+
+.container-icon-back_02 {
+    display: flex;
+    margin-left: -50px; /* Ajuste conforme necessário */
+    margin-top: -80px; /* Ajuste conforme necessário */
+    position: absolute; /* Necessário para posicionamento em diversas partes da tela */
+    top: 100px; /* Posição inicial fora da tela, acima do topo */
+    animation: chuva 20s linear infinite; /* Tempo e repetição da animação */
+    opacity: 0;
+    width: 60%; /* A largura da imagem será 100% do container */
+    height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+    
+}
+
+.container-icon-back_03 {
+    display: flex;
+    margin-left: 200px; /* Ajuste conforme necessário */
+    margin-top: -280px; /* Ajuste conforme necessário */
+    position: relative; /* Necessário para posicionamento em diversas partes da tela */
+    top: 100px; /* Posição inicial fora da tela, acima do topo */
+    animation: chuva 20s linear infinite; /* Tempo e repetição da animação */
+    
+    
+}
+
+
 main {
     height: 100vh;
 }
+
+/* Animaçoes */
 
 @keyframes neon {
     0%, 100% {
@@ -107,3 +133,67 @@ main {
         transform: translateY(0);
     }
 }
+
+@keyframes neonGlow {
+    from {
+        text-shadow: 
+            0 0 5px #0ff,
+            0 0 4px #0ff,
+            0 0 10px #0ff,
+            0 0 12px #0ff,
+            0 0 20px #0ff;
+    }
+    to {
+        text-shadow: 
+            0 0 10px #0ff,
+            0 0 14px #0ff,
+            0 0 20px #0ff,
+            0 0 30px #0ff,
+            0 0 34px #0ff;
+    }
+}
+
+.icone-chuva {
+    position: absolute;
+    top: -100px; /* Posição inicial fora da tela, acima do topo */
+    animation: chuva 5s linear infinite; /* Tempo e repetição da animação */
+}
+
+@keyframes chuva {
+    0% {
+        top: -70px; /* Posição inicial fora da tela */
+        opacity: 0; /* Opacidade inicial */
+    }
+    100% {
+        top: 100vh; /* Posição final abaixo da tela */
+        opacity: 1; /* Opacidade final */
+    }
+}
+
+/* Estilos adicionais para diferentes delays e posições iniciais */
+.icone-chuva:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.icone-chuva:nth-child(2) {
+    left: 30%;
+    animation-delay: 1s;
+}
+
+.icone-chuva:nth-child(3) {
+    left: 50%;
+    animation-delay: 2s;
+}
+
+.icone-chuva:nth-child(4) {
+    left: 70%;
+    animation-delay: 3s;
+}
+
+.icone-chuva:nth-child(5) {
+    left: 90%;
+    animation-delay: 4s;
+}
+
+/* Adicione mais estilos para outros ícones conforme necessário */
