@@ -54,14 +54,25 @@ animation: neonGlow 1.5s infinite alternate;
    
 }
 
-.container-login {
+.container-novo_sorteio {
     width: 400px; /* Define a largura da imagem */
     height: 10px; /* Define a altura da imagem */
-    margin-left: -80px; /* Ajuste conforme necessário */
-    margin-top: 200px; /* Ajuste conforme necessário */
-   
+    margin-left: -150px; /* Ajuste conforme necessário */
+    margin-top: 150px; /* Ajuste conforme necessário */
+    border-radius: 10px;
+    animation: float 27s infinite alternate; /* Aplica a animação */
+    cursor: pointer; /* Muda o cursor ao passar sobre a imagem */  
 }
-.container-login img {
+
+#titulo {
+    display: none; /* Esconde o título inicialmente */
+    margin-top: 20px; /* Espaço entre a imagem e o título */
+}
+
+.hidden {
+    display: none; /* Classe auxiliar para esconder elementos */
+}
+.container-novo_sorteio img {
     width: 100%; /* A largura da imagem será 100% do container */
     height: auto; /* A altura será ajustada automaticamente para manter a proporção */
   }
@@ -76,6 +87,7 @@ animation: neonGlow 1.5s infinite alternate;
     opacity: 0;
     width: 80%; /* A largura da imagem será 100% do container */
     height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+    opacity: 0.5; /* Ajuste o valor conforme necessário */
     
     
 }
@@ -90,6 +102,7 @@ animation: neonGlow 1.5s infinite alternate;
     opacity: 0;
     width: 60%; /* A largura da imagem será 100% do container */
     height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+    opacity: 0.5; /* Ajuste o valor conforme necessário */
     
 }
 
@@ -100,6 +113,8 @@ animation: neonGlow 1.5s infinite alternate;
     position: relative; /* Necessário para posicionamento em diversas partes da tela */
     top: 100px; /* Posição inicial fora da tela, acima do topo */
     animation: chuva 20s linear infinite; /* Tempo e repetição da animação */
+    opacity: 0.5; /* Ajuste o valor conforme necessário */
+   
     
     
 }
@@ -162,11 +177,11 @@ main {
 @keyframes chuva {
     0% {
         top: -70px; /* Posição inicial fora da tela */
-        opacity: 0; /* Opacidade inicial */
+        opacity: 0.2; /* Ajuste o valor conforme necessário */
     }
     100% {
-        top: 100vh; /* Posição final abaixo da tela */
-        opacity: 1; /* Opacidade final */
+        top: 70vh; /* Posição final abaixo da tela */
+        opacity: 0; /* Ajuste o valor conforme necessário */
     }
 }
 
