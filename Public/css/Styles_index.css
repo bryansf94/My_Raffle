@@ -60,8 +60,11 @@ animation: neonGlow 1.5s infinite alternate;
     margin-left: -150px; /* Ajuste conforme necessário */
     margin-top: 150px; /* Ajuste conforme necessário */
     border-radius: 10px;
-    animation: float 27s infinite alternate; /* Aplica a animação */
     cursor: pointer; /* Muda o cursor ao passar sobre a imagem */  
+    position: relative; /* Necessário para posicionar o título */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #titulo {
@@ -75,7 +78,20 @@ animation: neonGlow 1.5s infinite alternate;
 .container-novo_sorteio img {
     width: 100%; /* A largura da imagem será 100% do container */
     height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+    transition: transform 0.3s ease; /* Transição suave ao transformar */
   }
+
+  .container-novo_sorteio:hover img {
+    transform: scale(1.2); /* Aumenta o tamanho da imagem ao passar o mouse */
+}
+
+.container-novo_sorteio:hover #titulo {
+    display: block; /* Mostra o título ao passar o mouse */
+}
+
+.container-novo_sorteio:hover img {
+    animation: float 1.5s ease-in-out infinite; /* Aplica animação de flutuação */
+}
 
 .container-icon-back_01 {
     display: flex;
@@ -180,7 +196,7 @@ main {
         opacity: 0.2; /* Ajuste o valor conforme necessário */
     }
     100% {
-        top: 70vh; /* Posição final abaixo da tela */
+        top: 10vh; /* Posição final abaixo da tela */
         opacity: 0; /* Ajuste o valor conforme necessário */
     }
 }
@@ -212,3 +228,8 @@ main {
 }
 
 /* Adicione mais estilos para outros ícones conforme necessário */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
