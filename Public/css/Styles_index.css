@@ -2,7 +2,7 @@
 body {
     display: flex;
     background-color: #000;
-    background: linear-gradient(135deg, #0b0c10 0%, #1c1d24 100%); /* Gradiente de #0b0c10 para #1c1d24 */
+    background: linear-gradient(135deg, #0b0c10 0%, #000 100%); /* Gradiente de #0b0c10 para #1c1d24 */
     font-family: 'Arial', sans-serif;
     justify-content: center;
     align-items: center;
@@ -57,7 +57,7 @@ animation: neonGlow 1.5s infinite alternate;
 .container-novo_sorteio {
     width: 400px; /* Define a largura da imagem */
     height: 10px; /* Define a altura da imagem */
-    margin-left: -150px; /* Ajuste conforme necessário */
+    margin-left: -100px; /* Ajuste conforme necessário */
     margin-top: 150px; /* Ajuste conforme necessário */
     border-radius: 10px;
     cursor: pointer; /* Muda o cursor ao passar sobre a imagem */  
@@ -74,6 +74,22 @@ animation: neonGlow 1.5s infinite alternate;
 
 .hidden {
     display: none; /* Classe auxiliar para esconder elementos */
+    margin-left:136px;
+    margin-bottom: -150px;
+    font-family: 'Versus Medium';
+    font-weight: bold; /* Adiciona negrito ao texto */
+    font-size: 40px; /* Aumente este valor para aumentar o tamanho da fonte */
+    text-shadow: 0 0 2px rgba(0, 0, 255, 0.7); /* Efeito de sombra para replicar o estilo da imagem */
+    color: #fff;
+    transform: translate(-50%, -50%); /* Centraliza o texto */
+    text-align: top; /* Centraliza o texto dentro do elemento */
+    text-shadow: 
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 40px #0ff,
+    0 0 80px #0ff;
+animation: neonGlow 1.5s infinite alternate;
 }
 .container-novo_sorteio img {
     width: 100%; /* A largura da imagem será 100% do container */
@@ -130,8 +146,6 @@ animation: neonGlow 1.5s infinite alternate;
     top: 100px; /* Posição inicial fora da tela, acima do topo */
     animation: chuva 20s linear infinite; /* Tempo e repetição da animação */
     opacity: 0.5; /* Ajuste o valor conforme necessário */
-   
-    
     
 }
 
@@ -230,6 +244,6 @@ main {
 /* Adicione mais estilos para outros ícones conforme necessário */
 @keyframes float {
     0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(8px); }
     100% { transform: translateY(0); }
 }

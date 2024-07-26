@@ -1,4 +1,4 @@
-//Função para ativar o titulo da imagem na home-page
+/*Função para ativar o titulo da imagem na home-page
 document.addEventListener('DOMContentLoaded', function() {
     var imagem = document.getElementById('login-icone');
     var titulo = document.getElementById('titulo');
@@ -13,3 +13,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+*/

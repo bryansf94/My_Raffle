@@ -18,3 +18,20 @@ será minha primeria vez tendo contato, sendo assim, segue a forma em que estou 
 - bilhete: Tabela referente as rifas propriamente ditas, onde inclusive eu faço o vinculo entre rifa e comprador.
 - vencedor: Tabela para cadastar o vinculo entre bilhete, sorteio e o comprador que venceu.
 
+## Linguagens e ferramentas trabalhadas:
+- PHP: Para conexão com o banco de dados,
+- PHP Server: Servidor nativo do PHP para subir localmente a aplicação.
+- HTML e CSS: Linguagens de marcação e estilização.
+- Java js: Usado em alguns scripts para funções específícas.
+- FigJam: Usado para planejar os requisitos e tecnologias do projeto.
+
+## Estruturas do Projeto:
+- Private: Arquivos de configuração mais específicos que não quero que o usuário acesse.
+- Projeto: Arquivos relacionadas a documentação do projeto.
+- Public: Arquivos que preciso que o usuário acesse contendo index, imagens etc.
+
+## Recursos e termos do cóidigo:
+
+
+
+

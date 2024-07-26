@@ -24,8 +24,8 @@
       <h1>- Bem vindo ao MyRiffle! Você está com sorte hoje?- </h1> 
       </div>  
     <div class="container-novo_sorteio">
+    <h1 id="titulo" class="hidden">Novo Sorteio!</h1>
     <img src="img/login-icone.JPEG" class="container-novo_sorteio" alt="login-icone" id="login-icone">
-    <h1 id="titulo" class="hidden">Este é o título</h1>
     </div>
     <div class="container-icon-back_01">
     <img src="img/icon_back_01.png" class="container-icon-back_01" alt="icon_back_01">
