@@ -65,6 +65,19 @@ body {
     align-items: center;
 
  }
+
+ .container-sorteio_teste {
+    width: 400px; /* Define a largura da imagem */
+    height: 5px; /* Define a altura da imagem */
+    margin-left: -200px; /* Ajuste conforme necessário */
+    margin-top: 200px; /* Ajuste conforme necessário */
+    cursor: pointer; /* Muda o cursor ao passar sobre a imagem */
+    position: relative; /* Necessário para posicionar o título */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+ }
    
 
 .container-novo_texto {
@@ -91,10 +104,35 @@ body {
     
 }
 
+#titulo_sorteio_teste{
+    display: none; /* Esconde o título inicialmente */
+    margin-top: 200px; /* Espaço entre a imagem e o título */
+}
+
 .hidden_texto_sorteio {
     display: flex; /* Classe auxiliar para esconder elementos */
     margin-left: 190px;
     margin-bottom: -5px;
+    font-family: 'Versus Medium';
+    font-weight: bold; /* Adiciona negrito ao texto */
+    font-size: 40px; /* Aumente este valor para aumentar o tamanho da fonte */
+    text-shadow: 0 0 2px rgba(0, 0, 255, 0.7); /* Efeito de sombra para replicar o estilo da imagem */
+    color: #fff;
+    transform: translate(-50%, -50%); /* Centraliza o texto */
+    text-align: top; /* Centraliza o texto dentro do elemento */
+    text-shadow: 
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 40px #0ff,
+    0 0 80px #0ff;
+    animation: neonGlow 1.5s infinite alternate;
+}
+
+.hidden_sorteio_teste {
+    display: flex; /* Classe auxiliar para esconder elementos */
+    margin-left: 55px;
+    margin-bottom: -220px;
     font-family: 'Versus Medium';
     font-weight: bold; /* Adiciona negrito ao texto */
     font-size: 40px; /* Aumente este valor para aumentar o tamanho da fonte */
@@ -131,21 +169,21 @@ body {
     animation: neonGlow 1.5s infinite alternate;
 }
 
-.container-novo_sorteio img, .container-novo_texto img {
+.container-novo_sorteio img, .container-novo_texto img, .container-sorteio_teste img {
     width: 100%; /* A largura da imagem será 100% do container */
     height: auto; /* A altura será ajustada automaticamente para manter a proporção */
     transition: transform 0.3s ease; /* Transição suave ao transformar */
 }
 
-.container-novo_sorteio:hover img, .container-novo_texto:hover img {
+.container-novo_sorteio:hover img, .container-novo_texto:hover img, .container-sorteio_teste:hover img {
     transform: scale(1.2); /* Aumenta o tamanho da imagem ao passar o mouse */
 }
 
-.container-novo_sorteio:hover #titulo_novo_sorteio, .container-novo_texto:hover #titulo_sorteio {
+.container-novo_sorteio:hover #titulo_novo_sorteio, .container-novo_texto:hover #titulo_sorteio, .container-sorteio_teste:hover #titulo_sorteio_teste {
     display: block; /* Mostra o título ao passar o mouse */
 }
 
-.container-novo_sorteio:hover img, .container-novo_texto:hover img {
+.container-novo_sorteio:hover img, .container-novo_texto:hover img, .container-sorteio_teste:hover img {
     animation: float 1.5s ease-in-out infinite; /* Aplica animação de flutuação */
 }
 

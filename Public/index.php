@@ -29,7 +29,11 @@
     </div>
     <div class="container-novo_texto">
         <h1 id="titulo_sorteio" class="hidden_texto_sorteio">Ver Sorteios</h1>
-        <img src="img/ver_sorteio.JPEG" alt="Outro Sorteio">
+        <img src="img/ver_sorteio.JPEG" alt="Ver Sorteios">
+    </div>
+    <div class="container-sorteio_teste">
+        <h1 id="titulo_sorteio_teste" class="hidden_sorteio_teste">Sorteio de Demo</h1>
+        <img src="img/sorteio_teste.JPEG" alt="Sorteio Teste">
     </div>
     <div class="container-icon-back_01">
     <img src="img/icon_back_01.png" class="container-icon-back_01" alt="icon_back_01">
