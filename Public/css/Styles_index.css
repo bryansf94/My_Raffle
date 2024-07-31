@@ -56,34 +56,64 @@ body {
 .container-novo_sorteio {
     width: 400px; /* Define a largura da imagem */
     height: 5px; /* Define a altura da imagem */
-    margin-left: -100px; /* Ajuste conforme necessário */
+    margin-left: -200px; /* Ajuste conforme necessário */
     margin-top: 200px; /* Ajuste conforme necessário */
-    border-radius: 10px;
     cursor: pointer; /* Muda o cursor ao passar sobre a imagem */
     position: relative; /* Necessário para posicionar o título */
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+
+ }
+   
 
 .container-novo_texto {
     width: 400px; /* Define a largura da imagem */
     height: 5px; /* Define a altura da imagem */
-    margin-left: 400px; /* Ajuste conforme necessário */
+    margin-left: 200px; /* Ajuste conforme necessário */
     margin-top: 195px; /* Ajuste conforme necessário */
     cursor: pointer; /* Muda o cursor ao passar sobre a imagem */
     position: relative; /* Necessário para posicionar o título */
-   
+    border-radius: 10px;
+    
 }
+   
 
-#titulo, #novo_texto {
+
+#titulo_novo_sorteio{
     display: none; /* Esconde o título inicialmente */
     margin-top: 200px; /* Espaço entre a imagem e o título */
 }
 
-.hidden, .hidden_texto {
+#titulo_sorteio {
+    display: none; /* Esconde o título inicialmente */
+    margin-top: -20px; /* Espaço entre a imagem e o título */
+    
+}
+
+.hidden_texto_sorteio {
     display: flex; /* Classe auxiliar para esconder elementos */
-    margin-left: 136px;
+    margin-left: 190px;
+    margin-bottom: -5px;
+    font-family: 'Versus Medium';
+    font-weight: bold; /* Adiciona negrito ao texto */
+    font-size: 40px; /* Aumente este valor para aumentar o tamanho da fonte */
+    text-shadow: 0 0 2px rgba(0, 0, 255, 0.7); /* Efeito de sombra para replicar o estilo da imagem */
+    color: #fff;
+    transform: translate(-50%, -50%); /* Centraliza o texto */
+    text-align: top; /* Centraliza o texto dentro do elemento */
+    text-shadow: 
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 40px #0ff,
+    0 0 80px #0ff;
+    animation: neonGlow 1.5s infinite alternate;
+}
+
+.hidden_novo_sorteio {
+    display: flex; /* Classe auxiliar para esconder elementos */
+    margin-left: 55px;
     margin-bottom: -220px;
     font-family: 'Versus Medium';
     font-weight: bold; /* Adiciona negrito ao texto */
@@ -111,7 +141,7 @@ body {
     transform: scale(1.2); /* Aumenta o tamanho da imagem ao passar o mouse */
 }
 
-.container-novo_sorteio:hover #titulo, .container-novo_texto:hover #novo_texto {
+.container-novo_sorteio:hover #titulo_novo_sorteio, .container-novo_texto:hover #titulo_sorteio {
     display: block; /* Mostra o título ao passar o mouse */
 }
 
