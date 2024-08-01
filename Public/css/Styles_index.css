@@ -25,18 +25,29 @@ body {
     padding: 200px; /* Adiciona um espaço de 10px entre o conteúdo e a borda */
     box-shadow: 0 0 20px #0ef, inset 0 0 #0ef;
     animation: neon 5s infinite alternate; /* Aplica a animação */
+    animation: neon3 5s infinite alternate; /* Aplica a animação */
     animation: float 20s infinite alternate; /* Aplica a animação */
 }
-
+.container-logo:hover {
+    box-shadow: 0 0 20px #00c3ff, inset 0 0 10px #5500ff; /* Muda a cor da sombra para vermelho ao passar o mouse */
+  }
 .container {
     justify-content: center; /* Centraliza horizontalmente */
     height: 90vh; /* Altura do contêiner, ajuste conforme necessário */
 }
+@keyframes neon3 {
+    0% {
+      box-shadow: 0 0 20px #0ef, inset 0 0 10px #0ef;
+    }
+    100% {
+      box-shadow: 0 0 30px #0ef, inset 0 0 15px #0ef;
+    }
+  }
 
 .texto-logo {
     width: 460px;
     margin-left: 445px; /* Ajuste conforme necessário */
-    margin-top: -100px; /* Ajuste conforme necessário */
+    margin-top: 100px; /* Ajuste conforme necessário */
     font-family: 'Versus Medium';
     font-weight: bold; /* Adiciona negrito ao texto */
     font-size: 19px; /* Aumente este valor para aumentar o tamanho da fonte */
@@ -53,10 +64,30 @@ body {
     animation: neonGlow 1.5s infinite alternate;
 }
 
+.texto-menu {
+    width: 460px;
+    margin-left: 245px; /* Ajuste conforme necessário */
+    margin-top: 700px; /* Ajuste conforme necessário */
+    font-family: 'Versus Medium';
+    font-weight: bold; /* Adiciona negrito ao texto */
+    font-size: 36px; /* Aumente este valor para aumentar o tamanho da fonte */
+    text-shadow: 0 0 2px rgba(0, 0, 255, 0.7); /* Efeito de sombra para replicar o estilo da imagem */
+    color: #fff;
+    transform: translate(-50%, -50%); /* Centraliza o texto */
+    text-align: center; /* Centraliza o texto dentro do elemento */
+    text-shadow: 
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 40px #0ff,
+    0 0 80px #0ff;
+    animation: neonGlow 1.5s infinite alternate;
+}
+
 .container-novo_sorteio {
     width: 400px; /* Define a largura da imagem */
     height: 5px; /* Define a altura da imagem */
-    margin-left: -200px; /* Ajuste conforme necessário */
+    margin-left: -300px; /* Ajuste conforme necessário */
     margin-top: 200px; /* Ajuste conforme necessário */
     cursor: pointer; /* Muda o cursor ao passar sobre a imagem */
     position: relative; /* Necessário para posicionar o título */
@@ -69,8 +100,8 @@ body {
  .container-sorteio_teste {
     width: 400px; /* Define a largura da imagem */
     height: 5px; /* Define a altura da imagem */
-    margin-left: -200px; /* Ajuste conforme necessário */
-    margin-top: 200px; /* Ajuste conforme necessário */
+    margin-left: 465px; /* Ajuste conforme necessário */
+    margin-top: -5px; /* Ajuste conforme necessário */
     cursor: pointer; /* Muda o cursor ao passar sobre a imagem */
     position: relative; /* Necessário para posicionar o título */
     display: flex;
@@ -83,7 +114,7 @@ body {
 .container-novo_texto {
     width: 400px; /* Define a largura da imagem */
     height: 5px; /* Define a altura da imagem */
-    margin-left: 200px; /* Ajuste conforme necessário */
+    margin-left: 10px; /* Ajuste conforme necessário */
     margin-top: 195px; /* Ajuste conforme necessário */
     cursor: pointer; /* Muda o cursor ao passar sobre a imagem */
     position: relative; /* Necessário para posicionar o título */
@@ -106,12 +137,12 @@ body {
 
 #titulo_sorteio_teste{
     display: none; /* Esconde o título inicialmente */
-    margin-top: 200px; /* Espaço entre a imagem e o título */
+    margin-top: -20px; /* Espaço entre a imagem e o título */
 }
 
 .hidden_texto_sorteio {
     display: flex; /* Classe auxiliar para esconder elementos */
-    margin-left: 190px;
+    margin-left: 195px;
     margin-bottom: -5px;
     font-family: 'Versus Medium';
     font-weight: bold; /* Adiciona negrito ao texto */
@@ -131,8 +162,8 @@ body {
 
 .hidden_sorteio_teste {
     display: flex; /* Classe auxiliar para esconder elementos */
-    margin-left: 55px;
-    margin-bottom: -220px;
+    margin-left: 100px;
+    margin-bottom: -10px;
     font-family: 'Versus Medium';
     font-weight: bold; /* Adiciona negrito ao texto */
     font-size: 40px; /* Aumente este valor para aumentar o tamanho da fonte */
@@ -151,7 +182,7 @@ body {
 
 .hidden_novo_sorteio {
     display: flex; /* Classe auxiliar para esconder elementos */
-    margin-left: 55px;
+    margin-left: -50px;
     margin-bottom: -220px;
     font-family: 'Versus Medium';
     font-weight: bold; /* Adiciona negrito ao texto */
@@ -186,6 +217,8 @@ body {
 .container-novo_sorteio:hover img, .container-novo_texto:hover img, .container-sorteio_teste:hover img {
     animation: float 1.5s ease-in-out infinite; /* Aplica animação de flutuação */
 }
+
+
 
 .container-icon-back_01 {
     display: flex;
@@ -271,6 +304,25 @@ main {
     }
 }
 
+@keyframes neonGlow2 {
+    from {
+        text-shadow: 
+            0 0 5px #0ff,
+            0 0 4px #0ff,
+            0 0 10px #0ff,
+            0 0 12px #0ff,
+            0 0 20px #0ff;
+    }
+    to {
+        text-shadow: 
+            0 0 10px rgb(255, 0, 140),
+            0 0 14px rgb(255, 0, 195),
+            0 0 20px rgb(255, 0, 242),
+            0 0 30px rgb(255, 0, 136),
+            0 0 34px rgb(255, 0, 212);
+    }
+}
+
 .icone-chuva {
     position: absolute;
     top: -100px; /* Posição inicial fora da tela, acima do topo */
@@ -283,7 +335,7 @@ main {
         opacity: 0.2; /* Ajuste o valor conforme necessário */
     }
     100% {
-        top: 10vh; /* Posição final abaixo da tela */
+        top: 0vh; /* Posição final abaixo da tela */
         opacity: 0; /* Ajuste o valor conforme necessário */
     }
 }
@@ -330,3 +382,14 @@ main {
         0 0 80px #0ff;
     }
 }
+
+@keyframes neon2 {
+    0%, 100% {
+        background: 0 0 5px #0ff,
+        0 0 10px rgb(247, 0, 255),
+        0 0 20px rgb(255, 0, 230),
+        0 0 40px rgb(76, 0, 255),
+        0 0 80px #0ff;
+    }
+}
+
