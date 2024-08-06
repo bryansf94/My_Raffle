@@ -101,7 +101,7 @@ body {
  .container-sorteio_teste {
     width: 400px; /* Define a largura da imagem */
     height: 5px; /* Define a altura da imagem */
-    margin-left: 440px; /* Ajuste conforme necessário */
+    margin-left: 439px; /* Ajuste conforme necessário */
     margin-top: -5px; /* Ajuste conforme necessário */
     cursor: pointer; /* Muda o cursor ao passar sobre a imagem */
     position: relative; /* Necessário para posicionar o título */
@@ -164,7 +164,7 @@ body {
 
 .hidden_sorteio_teste {
     display: flex; /* Classe auxiliar para esconder elementos */
-    margin-left: 100px;
+    margin-left: 200px;
     margin-bottom: -10px;
     font-family: 'Versus Medium';
     font-weight: bold; /* Adiciona negrito ao texto */
