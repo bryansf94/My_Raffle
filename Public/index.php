@@ -1,3 +1,11 @@
+<?php
+
+require __DIR__ . '/../src/concet_db.php';
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -21,16 +29,22 @@
         <h2>- Faça sua Escolha -</h2>
       </div>
         <div class="container-novo_sorteio">
+          <a href="https://www.google.com/">
           <h1 id="titulo_novo_sorteio" class="hidden_novo_sorteio">Novo Sorteio+</h1>
           <img src="img/login-icone.JPEG" class="container-novo_sorteio" alt="icone-novo-sorteio" id="login-icone">
+          </a>
         </div>
         <div class="container-novo_texto">
+          <a href="https://www.google.com/">
           <h1 id="titulo_sorteio" class="hidden_texto_sorteio">Ver Sorteios</h1>
           <img src="img/ver_sorteio.JPEG" alt="Ver Sorteios">
+          </a>
         </div>
         <div class="container-sorteio_teste">
+          <a href="https://www.google.com/">
           <h1 id="titulo_sorteio_teste" class="hidden_sorteio_teste">Demo</h1>
           <img src="img/sorteio_teste.JPEG" alt="Sorteio Teste">
+          </a>
         </div>
       </div>
       <div class="container-icon-back_01">
