@@ -29,7 +29,7 @@ require __DIR__ . '/../src/concet_db.php';
         <h2>- Faça sua Escolha -</h2>
       </div>
         <div class="container-novo_sorteio">
-          <a href="https://www.google.com/">
+          <a href="cadastro_Sorteio.php" target="_blank">
           <h1 id="titulo_novo_sorteio" class="hidden_novo_sorteio">Novo Sorteio+</h1>
           <img src="img/login-icone.JPEG" class="container-novo_sorteio" alt="icone-novo-sorteio" id="login-icone">
           </a>
