@@ -20,6 +20,25 @@ require __DIR__ . '/../src/concet_db.php';
     <title>Novo Sorteio</title>
 </head>
 <body>
+    <form class ="cadastro_sorteio">
+        <img src="img/logo-banner.png" alt="logo do banner" widght=120>
+        <div class="formulario_cadastro_sorteio">
+            <input type="text" name="nome_sorteio" required>
+            <label>Nome do Sorteio</label>
+        </div>
+        <div class="formulario_cadastro_sorteio">
+            <input type="text" name="descricao_sorteio" required>
+            <label>Descrição do Sorteio</label>
+        </div>
+        <div class="formulario_cadastro_sorteio">
+            <input type="date" name="data_inico" required>
+            <label>Data de inicio</label>
+        </div>
+        <div class="formulario_cadastro_sorteio">
+            <input type="date" name="data_final" required>
+            <label>Data de termino</label>
+        </div>
+
     <h1>-TESTE-</h1>
 </body>
 </html>
