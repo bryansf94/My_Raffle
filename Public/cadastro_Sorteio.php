@@ -2,6 +2,7 @@
 
 require __DIR__ . '/../src/concet_db.php';
 
+
 ?>
 
 <!DOCTYPE html>
@@ -20,25 +21,31 @@ require __DIR__ . '/../src/concet_db.php';
     <title>Novo Sorteio</title>
 </head>
 <body>
-    <form class ="cadastro_sorteio">
+    <form action="criando_Sorteio.php" method="POST" class ="cadastro_sorteio">
         <img src="img/logo-banner.png" alt="logo do banner" widght=120>
         <div class="formulario_cadastro_sorteio">
-            <input type="text" name="nome_sorteio" required>
-            <label>Nome do Sorteio</label>
+            <label for="nome_sorteio">Nome do Sorteio</label>
+            <input type="text" id="nome_sorteio" name="nome_sorteio" required>
+        </div>
+        <div>
+        <label for="descricao_sorteio">Descrição:</label><br>
+        <textarea id="descricao_sorteio" name="descricao_sorteio" rows="4" cols="50">
+        </textarea><br>
+        </div>
+        <div class="numero_Rifas_cadastro_sorteio">
+            <label>Quantidade de Rifas</label>
+            <input type="number" name="numero_rifas" id="quantity" name="quantity" min="0" max="500" required>
         </div>
         <div class="formulario_cadastro_sorteio">
-            <input type="text" name="descricao_sorteio" required>
-            <label>Descrição do Sorteio</label>
+            <label for="data_inicio">Data de inicio</label>
+            <input type="date" id="data_inicio" name="data_inico" required>
         </div>
         <div class="formulario_cadastro_sorteio">
-            <input type="date" name="data_inico" required>
-            <label>Data de inicio</label>
+            <label for="data_fim">Data de termino</label>
+            <input type="date" id="data_inicio" name="data_final" required>
         </div>
-        <div class="formulario_cadastro_sorteio">
-            <input type="date" name="data_final" required>
-            <label>Data de termino</label>
-        </div>
-
-    <h1>-TESTE-</h1>
+        <input type="submit" value="Enviar">
+    </form>
+    <h1></h1>
 </body>
 </html>
