@@ -36,7 +36,7 @@ require __DIR__ . '/../src/modelos/sorteio.php';
           </a>
         </div>
         <div class="container-novo_texto">
-          <a href="https://www.google.com/">
+          <a href="ver_Sorteio.php" target="_blank">
           <h1 id="titulo_sorteio" class="hidden_texto_sorteio">Ver Sorteios</h1>
           <img src="img/ver_sorteio.JPEG" alt="Ver Sorteios">
           </a>
