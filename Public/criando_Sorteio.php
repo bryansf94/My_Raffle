@@ -7,12 +7,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $nome_sorteio = $_POST['nome_sorteio'];
     $descricao_sorteio = $_POST['descricao_sorteio'];
-    $data_inicio = $_POST['data_inicio'];
-    $data_fim = $_POST['data_fim'];
+    $data_inicio = new DateTime($_POST['data_inicio']);
+    $data_fim = new DateTime($_POST['data_fim']);
     $status = $_POST['status'];
 
-
-    $sorteio = new sorteio(  null,  // ID auto-incrementado
+    $sorteio = new Sorteio(
     $nome_sorteio,
     $descricao_sorteio,
     $data_inicio,

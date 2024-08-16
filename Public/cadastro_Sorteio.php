@@ -27,6 +27,10 @@ require __DIR__ . '/../src/concet_db.php';
             <label for="nome_sorteio">Nome do Sorteio</label>
             <input type="text" id="nome_sorteio" name="nome_sorteio" required>
         </div>
+        <div class="status_cadastro_sorteio">
+            <label for="status">status</label>
+            <input type="text" id="status" name="status" required>
+        </div>
         <div>
         <label for="descricao_sorteio">Descrição:</label><br>
         <textarea id="descricao_sorteio" name="descricao_sorteio" rows="4" cols="50">
