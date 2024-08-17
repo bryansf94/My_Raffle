@@ -1,12 +1,15 @@
 <?php
 
 
-require_once __DIR__ . 'src\concet_db.php';
-require_once __DIR__ . 'src\modelos\verSorteio.php';
-require 'visualizandoSorteio.php';
+include_once 'src\concet_db.php';
+include_once 'src\modelos\verSorteio.php';
+include_once 'src\modelos\sorteio.php';
+
+// Conectar ao banco de dados
+$pdo = conectarBanco();
 
 
-$exibirSorteio = new verSorteio ($pdo);
+$exibirSorteio = new VerSorteio ($pdo);
 $sorteio = $exibirSorteio->exibirSorteios();
 
 

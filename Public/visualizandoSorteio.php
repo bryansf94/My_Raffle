@@ -1,7 +1,7 @@
 <?php
 
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (isset($_SERVER['REQUEST_METHOD'])) {
 
     $nome_sorteio = $_POST['nome_sorteio'];
     $descricao_sorteio = $_POST['descricao_sorteio'];

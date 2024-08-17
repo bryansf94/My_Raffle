@@ -10,7 +10,7 @@ private string $status;
 
 public function __construct(string $nome_sorteio, string $descricao_sorteio, ?DateTime $data_inicio, ?DateTime $data_fim, string $status)
 {
-   $this->id = $id_sorteio;
+   
    $this->nome_sorteio = $nome_sorteio;
    $this->descricao_sorteio = $descricao_sorteio;
    $this->data_inicio = $data_inicio;
