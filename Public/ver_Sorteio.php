@@ -1,16 +1,20 @@
 <?php
 
 
-include_once 'src\concet_db.php';
-include_once 'src\modelos\verSorteio.php';
-include_once 'src\modelos\sorteio.php';
+require __DIR__ . '/../src/concet_db.php';
+require __DIR__ .'/../src/modelos/verSorteio.php';
+require __DIR__ . '/../src/modelos/sorteio.php';
 
 // Conectar ao banco de dados
 $pdo = conectarBanco();
 
+if ($pdo === null) {
+    die('Erro ao conectar ao banco de dados.');
+}
 
-$exibirSorteio = new VerSorteio ($pdo);
-$sorteio = $exibirSorteio->exibirSorteios();
+
+$verSorteio = new VerSorteio($pdo);
+$sorteio = $verSorteio->exibirSorteios();
 
 
 ?>
