@@ -71,9 +71,9 @@ $sorteio = $verSorteio->exibirSorteios();
 
       </tbody>
     </table>
-  <a class="botao-cadastrar" href="cadastrar-produto.php">Place Holder</a>
-  <form action="gerador-pdf.php" method="post">
-    <input type="submit" class="botao-cadastrar" value="Place Holder"/>
+   <a class="botao-cadastrar" href="cadastrar-produto.php">Place Holder</a>
+   <form action="gerador-pdf.php" method="post">
+  <input type="submit" class="botao-cadastrar" value="Place Holder"/>
   </form>
   </section>  
 </body>
