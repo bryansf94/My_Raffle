@@ -121,9 +121,10 @@ CREATE TABLE `sorteio` (
   `descricao_sorteio` varchar(200) NOT NULL,
   `data_inicio` date NOT NULL,
   `data_fim` date NOT NULL,
-  `satus` varchar(45) NOT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  `n_de_rifas` int DEFAULT NULL,
   PRIMARY KEY (`id_sorteio`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -132,6 +133,7 @@ CREATE TABLE `sorteio` (
 
 LOCK TABLES `sorteio` WRITE;
 /*!40000 ALTER TABLE `sorteio` DISABLE KEYS */;
+INSERT INTO `sorteio` VALUES (1,'teste','teste','2024-08-16','2024-08-16','teste',NULL),(2,'teste 02','novo sorteio de teste','2024-08-17','2024-08-17','novo',NULL),(3,'teste 2','tessssssssssss','2024-08-17','2024-08-17','testeeeee',NULL);
 /*!40000 ALTER TABLE `sorteio` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -187,4 +189,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-06-16 14:48:43
+-- Dump completed on 2024-08-19 12:49:19
