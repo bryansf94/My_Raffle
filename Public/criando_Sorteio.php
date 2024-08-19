@@ -10,13 +10,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data_inicio = new DateTime($_POST['data_inicio']);
     $data_fim = new DateTime($_POST['data_fim']);
     $status = $_POST['status'];
+    $n_de_rifas = $_POST['n_de_rifas'];
+
 
     $sorteio = new Sorteio(
     $nome_sorteio,
     $descricao_sorteio,
     $data_inicio,
     $data_fim,
-    $status);
+    $status,
+    $n_de_rifas);
 
     $conexao = conectarBanco();
 

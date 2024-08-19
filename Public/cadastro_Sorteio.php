@@ -38,7 +38,7 @@ require __DIR__ . '/../src/concet_db.php';
         </div>
         <div class="numero_Rifas_cadastro_sorteio">
             <label>Quantidade de Rifas</label>
-            <input type="number" name="numero_rifas" id="quantity" name="quantity" min="0" max="500" required>
+            <input type="number" name="n_de_rifas" id="n_de_rifas" name="n_de_rifas" min="0" max="500" required>
         </div>
         <div class="formulario_cadastro_sorteio">
             <label for="data_inicio">Data de inicio</label>

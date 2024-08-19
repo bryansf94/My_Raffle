@@ -20,7 +20,8 @@ class VerSorteio {
             $dados['descricao_sorteio'],
             new DateTime($dados['data_inicio']),
             new DateTime($dados['data_fim']),
-            $dados['status']
+            $dados['status'],
+            $dados['n_de_rifas']
         );
     }
 

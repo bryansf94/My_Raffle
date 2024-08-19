@@ -49,6 +49,7 @@ $sorteio = $verSorteio->exibirSorteios();
           <th>Data inicio</th>
           <th>Data Fim</th>
           <th>Status</th>
+          <th>Nº de Rifas</th>
           <th>Iniciar Sorteio?</th>
         </tr>
       </thead>
@@ -60,6 +61,7 @@ $sorteio = $verSorteio->exibirSorteios();
             <td><?= $sorteio->getDataInicio()->format('Y-m-d H:i:s') ?></td> <!-- Convertendo DateTime para string -->
             <td><?= $sorteio->getDatFim()->format('Y-m-d H:i:s') ?></td> <!-- Convertendo DateTime para string -->
             <td><?= $sorteio->getStatus() ?></td>
+            <td><?= $sorteio->getN_de_rifas() ?></td>
             <td>
             <form action="iniciar_sorteio.php" method="post">
              <button type="submit">Iniciar Sorteio</button>
