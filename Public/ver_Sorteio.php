@@ -39,9 +39,7 @@ $sorteio = $verSorteio->exibirSorteios();
 <main>
  <section class="ver-sorteios-page">
     <img src="img/logo-banner.png" class="container-logo" alt="logo-banner">
-    <h1>vendo sorteios<h1>
  </section>
- <h2>Lista de sorteios<h2>
  <section class="container-table">
     <table>
       <thead>
@@ -51,7 +49,7 @@ $sorteio = $verSorteio->exibirSorteios();
           <th>Data inicio</th>
           <th>Data Fim</th>
           <th>Status</th>
-          <th colspan="2">Ação</th>
+          <th>Iniciar Sorteio?</th>
         </tr>
       </thead>
       <tbody>
@@ -59,9 +57,13 @@ $sorteio = $verSorteio->exibirSorteios();
           <tr>
             <td><?= $sorteio->getNome() ?></td>
             <td><?= $sorteio->getDescricao() ?></td>
-            <td><?= $sorteio->getDataInicio() ?></td>
-            <td><?= $sorteio->getDatFim() ?></td>
+            <td><?= $sorteio->getDataInicio()->format('Y-m-d H:i:s') ?></td> <!-- Convertendo DateTime para string -->
+            <td><?= $sorteio->getDatFim()->format('Y-m-d H:i:s') ?></td> <!-- Convertendo DateTime para string -->
             <td><?= $sorteio->getStatus() ?></td>
+            <td>
+            <form action="iniciar_sorteio.php" method="post">
+             <button type="submit">Iniciar Sorteio</button>
+             </form>
             </td>
           </tr>
       <?php endforeach; ?>
@@ -69,9 +71,9 @@ $sorteio = $verSorteio->exibirSorteios();
 
       </tbody>
     </table>
-  <a class="botao-cadastrar" href="cadastrar-produto.php">Cadastrar produto</a>
+  <a class="botao-cadastrar" href="cadastrar-produto.php">Place Holder</a>
   <form action="gerador-pdf.php" method="post">
-    <input type="submit" class="botao-cadastrar" value="Baixar Relatório"/>
+    <input type="submit" class="botao-cadastrar" value="Place Holder"/>
   </form>
   </section>  
 </body>
