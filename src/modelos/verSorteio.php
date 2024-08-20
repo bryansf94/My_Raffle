@@ -16,6 +16,7 @@ class VerSorteio {
     {
         return new Sorteio(
            
+            $dados['id_sorteio'],
             $dados['nome_sorteio'],
             $dados['descricao_sorteio'],
             new DateTime($dados['data_inicio']),

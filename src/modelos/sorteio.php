@@ -9,9 +9,10 @@ private ?DateTime $data_fim;
 private string $status;
 private ?int $n_de_rifas;
 
-public function __construct(string $nome_sorteio, string $descricao_sorteio, ?DateTime $data_inicio, ?DateTime $data_fim, string $status, ?int $n_de_rifas)
+public function __construct(int $id_sorteio, string $nome_sorteio, string $descricao_sorteio, ?DateTime $data_inicio, ?DateTime $data_fim, string $status, ?int $n_de_rifas)
 {
    
+   $this->id_sorteio = $id_sorteio;
    $this->nome_sorteio = $nome_sorteio;
    $this->descricao_sorteio = $descricao_sorteio;
    $this->data_inicio = $data_inicio;
@@ -21,7 +22,7 @@ public function __construct(string $nome_sorteio, string $descricao_sorteio, ?Da
 
 }
 
-public function getId(): int
+public function getId(): ?int
 {
     return $this->id_sorteio;
 }
@@ -57,11 +58,12 @@ public function getN_de_rifas(): ?int
 }
 public function inserirNoBancoSorteio(PDO $conexao): bool
 {
-    $sql = "INSERT INTO sorteio (nome_sorteio, descricao_sorteio, data_inicio, data_fim, status, n_de_rifas) 
-            VALUES (:nome_sorteio, :descricao_sorteio, :data_inicio, :data_fim, :status, :n_de_rifas)";
+    $sql = "INSERT INTO sorteio (id_sorteio, nome_sorteio, descricao_sorteio, data_inicio, data_fim, status, n_de_rifas) 
+            VALUES (:id_sorteio, :nome_sorteio, :descricao_sorteio, :data_inicio, :data_fim, :status, :n_de_rifas)";
     $stmt = $conexao->prepare($sql);
     
-    $stmt->bindValue(':nome_sorteio', $this->nome_sorteio);
+    
+    $stmt->bindValue(':id_sorteio', $this->id_sorteio);
     $stmt->bindValue(':descricao_sorteio', $this->descricao_sorteio);
     $stmt->bindValue(':data_inicio', $this->data_inicio?->format('Y-m-d H:i:s'));
     $stmt->bindValue(':data_fim', $this->data_fim?->format('Y-m-d H:i:s'));

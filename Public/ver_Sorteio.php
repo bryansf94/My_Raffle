@@ -50,7 +50,8 @@ $sorteio = $verSorteio->exibirSorteios();
           <th>Data Fim</th>
           <th>Status</th>
           <th>Nº de Rifas</th>
-          <th>Iniciar Sorteio?</th>
+          <th>Ir para Sorteio?</th>
+          <th>Deletar Sorteio?</th>
         </tr>
       </thead>
       <tbody>
@@ -63,9 +64,14 @@ $sorteio = $verSorteio->exibirSorteios();
             <td><?= $sorteio->getStatus() ?></td>
             <td><?= $sorteio->getN_de_rifas() ?></td>
             <td>
-            <form action="iniciar_sorteio.php" method="post">
-             <button type="submit">Iniciar Sorteio</button>
-             </form>
+            <form action="index.php" method="get">
+              <input type="hidden" name="id" value="<?= $sorteio->getId() ?>">
+              <button type="submit">Ir para sorteio</button>
+            </form>
+             <td>
+            <form action="deletar_sorteio.php" method="post">
+              <button type="submit">Deletar Sorteio</button>
+            </fotm>
             </td>
           </tr>
       <?php endforeach; ?>
