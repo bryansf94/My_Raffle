@@ -38,5 +38,14 @@ class VerSorteio {
 
         return $dadosSorteio;
     }
+
+    public function exibirSorteioSelecionado(?int $id_sorteio)
+    {
+        $sql1 = "SELECT * FROM sorteio where id_sorteio = ?"; 
+        $statement = $this->pdo->prepare($sql1);
+        $statement->bindValue(1,$id_sorteio);
+        $statement->execute();
+
+    }
 }
 ?>

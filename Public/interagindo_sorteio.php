@@ -5,6 +5,7 @@ require __DIR__ . '/../src/concet_db.php';
 require __DIR__ .'/../src/modelos/verSorteio.php';
 require __DIR__ . '/../src/modelos/sorteio.php';
 
+
 // Conectar ao banco de dados
 $pdo = conectarBanco();
 
@@ -14,7 +15,8 @@ if ($pdo === null) {
 
 
 $verSorteio = new VerSorteio($pdo);
-$sorteio = $verSorteio->exibirSorteios();
+$sorteio = $verSorteio->exibirSorteioSelecionado(['id_sorteio']);
+
 
 
 ?>
@@ -33,7 +35,7 @@ $sorteio = $verSorteio->exibirSorteios();
     <link rel="stylesheet" href="css/Styles_index.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/admin.css">
-    <title>Ver Sorteios</title>
+    <title>Sorteio</title>
 </head>
 <body>
 <main>
@@ -44,7 +46,6 @@ $sorteio = $verSorteio->exibirSorteios();
     <table>
       <thead>
         <tr>
-          <th>iD Sorteio</th>
           <th>Nome Sorteio</th>
           <th>Descricão</th>
           <th>Data inicio</th>
@@ -56,9 +57,8 @@ $sorteio = $verSorteio->exibirSorteios();
         </tr>
       </thead>
       <tbody>
-      <?php foreach ($sorteio as $sorteio): ?>
           <tr>
-            <td><?= $sorteio->getId() ?></td>
+          td><?= $sorteio->getId() ?></td>
             <td><?= $sorteio->getNome() ?></td>
             <td><?= $sorteio->getDescricao() ?></td>
             <td><?= $sorteio->getDataInicio()->format('Y-m-d H:i:s') ?></td> <!-- Convertendo DateTime para string -->
@@ -67,7 +67,7 @@ $sorteio = $verSorteio->exibirSorteios();
             <td><?= $sorteio->getN_de_rifas() ?></td>
             <td>
             <form action="interagindo_sorteio.php" method="post" target="_blank">
-              <input type="hidden" name="id_sorteio" value="<?= $sorteio->getId() ?>">
+              <input type="hidden" name="id_sorteio" value="<?= $sorteio->exibirSorteioSelecionado($id_sorteio) ?>">
               <button type="submit">Ir para sorteio</button>
             </form>
              <td>
@@ -76,9 +76,6 @@ $sorteio = $verSorteio->exibirSorteios();
             </fotm>
             </td>
           </tr>
-      <?php endforeach; ?>
-
-
       </tbody>
     </table>
    <a class="botao-cadastrar" href="cadastrar-produto.php">Place Holder</a>
@@ -86,6 +83,7 @@ $sorteio = $verSorteio->exibirSorteios();
   <input type="submit" class="botao-cadastrar" value="Place Holder"/>
   </form>
   </section>  
+
+    
 </body>
-</main>
 </html>
