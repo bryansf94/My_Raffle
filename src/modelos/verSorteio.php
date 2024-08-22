@@ -40,16 +40,36 @@ class VerSorteio {
     }
 
     public function exibirSorteioSelecionado(?int $id_sorteio): array 
-    {
-        $sql1 = "SELECT * FROM sorteio where id_sorteio = ?"; 
-        $statement = $this->pdo->prepare($sql1);
-        $sorteios = $statement->fetchAll(PDO::FETCH_ASSOC);
+{
+    // Preparando a consulta SQL
+    $sql1 = "SELECT * FROM sorteio WHERE id_sorteio = ?"; 
+    $statement = $this->pdo->prepare($sql1);
+    
+    // Vinculando o parâmetro
+    $statement->bindValue(1, $id_sorteio, PDO::PARAM_INT);
+    
+    // Executando a consulta
+    $statement->execute();
 
-        $dadosSorteio2 = array_map(function ($sorteio) {
-            return $this->formarObjetoSorteio($sorteio);
-        }, $sorteios);
-
-        return $dadosSorteio2;
+    // Verificando se há resultados
+    $sorteios = $statement->fetchAll(PDO::FETCH_ASSOC);
+    if (count($sorteios) > 0) {
+        // Exibindo os dados de cada sorteio
+        foreach ($sorteios as $row) {
+            echo "id: " . $row["id_sorteio"] . " - Nome: " . $row["nome_sorteio"] . "<br>";
+        }
+    } else {
+        echo "0 resultados";
     }
+
+    // Mapeando os resultados para objetos, se necessário
+    $dadosSorteio2 = array_map(function ($sorteio) {
+        return $this->formarObjetoSorteio($sorteio);
+    }, $sorteios);
+
+    return $dadosSorteio2;
+}
+
+
 }
 ?>

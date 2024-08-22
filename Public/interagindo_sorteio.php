@@ -15,21 +15,13 @@ if ($pdo === null) {
 
 
 $verSorteioSelecionado = new VerSorteio($pdo);
-$verSorteioSelecionado->exibirSorteioSelecionado($_POST['id_sorteio']);
-
-if ($verSorteioSelecionado->num_row > 0) {
-  while($row = $result->fetch_assoc()){
-    echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
-  }
-} else {
-  echo "0 results";
-}
-$conn->close();
+$verSorteioSelecionado->exibirSorteioSelecionado($_POST['id_sorteio']); 
 
 
 
 var_dump($verSorteioSelecionado);
 var_dump($_POST['id_sorteio']);
+
 
 ?>
 
@@ -55,10 +47,10 @@ var_dump($_POST['id_sorteio']);
     <img src="img/logo-banner.png" class="container-logo" alt="logo-banner">
  </section>
  <section class="container-table">
-    <table>
+ <table>
       <thead>
-      <?php if (isset($verSorteioSelecionado)): ?>
         <tr>
+          <th>iD Sorteio</th>
           <th>Nome Sorteio</th>
           <th>Descricão</th>
           <th>Data inicio</th>
@@ -70,26 +62,28 @@ var_dump($_POST['id_sorteio']);
         </tr>
       </thead>
       <tbody>
+      <?php foreach ($sorteio as $sorteio): ?>
           <tr>
-          <td><?= $_POST['id_sorteio'] ?> </td>
-            
+            <td><?= $sorteio->getId()  ?> </td>
+            <td><?= $sorteio->getNome() ?></td>
+            <td><?= $sorteio->getDescricao() ?></td>
+            <td><?= $sorteio->getDataInicio()->format('Y-m-d H:i:s') ?></td> <!-- Convertendo DateTime para string -->
+            <td><?= $sorteio->getDatFim()->format('Y-m-d H:i:s') ?></td> <!-- Convertendo DateTime para string -->
+            <td><?= $sorteio->getStatus() ?></td>
+            <td><?= $sorteio->getN_de_rifas() ?></td>
             <td>
-            <form action="deletar_sorteio.php" method="post">
-              <button type="submit">Deletar Sorteio</button>
-            </fotm>
+            
+             <td>
             </td>
           </tr>
+      <?php endforeach; ?>
+
+
       </tbody>
     </table>
-    <?php else: ?>
-    <p>Sorteio não encontrado ou ID inválido.</p>
-<?php endif; ?>
-   <a class="botao-cadastrar" href="cadastrar-produto.php">Place Holder</a>
-   <form action="gerador-pdf.php" method="post">
-  <input type="submit" class="botao-cadastrar" value="Place Holder"/>
-  </form>
-  </section>  
 
-    
+    <p>Sorteio não encontrado ou ID inválido.</p>
+
+</section>   
 </body>
 </html>
