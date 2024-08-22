@@ -21,7 +21,6 @@ $verSorteioSelecionado->exibirSorteioSelecionado($_POST['id_sorteio']);
 var_dump($verSorteioSelecionado);
 var_dump($_POST['id_sorteio']);
 
-
 ?>
 
 <!DOCTYPE html>
