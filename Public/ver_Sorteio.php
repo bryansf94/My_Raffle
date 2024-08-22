@@ -17,6 +17,7 @@ $verSorteio = new VerSorteio($pdo);
 $sorteio = $verSorteio->exibirSorteios();
 
 
+
 ?>
 
 <!DOCTYPE html>
@@ -71,9 +72,6 @@ $sorteio = $verSorteio->exibirSorteios();
               <button type="submit">Ir para sorteio</button>
             </form>
              <td>
-            <form action="deletar_sorteio.php" method="post">
-              <button type="submit">Deletar Sorteio</button>
-            </fotm>
             </td>
           </tr>
       <?php endforeach; ?>

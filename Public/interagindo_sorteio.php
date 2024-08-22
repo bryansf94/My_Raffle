@@ -14,9 +14,12 @@ if ($pdo === null) {
 }
 
 
-$verSorteio = new VerSorteio($pdo);
-$sorteio = $verSorteio->exibirSorteioSelecionado(['id_sorteio']);
+$verSorteioSelecionado = new VerSorteio($pdo);
+$verSorteioSelecionado->exibirSorteioSelecionado($_POST['id_sorteio']);
 
+
+var_dump($verSorteioSelecionado);
+var_dump($_POST['id_sorteio']);
 
 
 ?>
@@ -45,6 +48,7 @@ $sorteio = $verSorteio->exibirSorteioSelecionado(['id_sorteio']);
  <section class="container-table">
     <table>
       <thead>
+      <?php if (isset($verSorteioSelecionado)): ?>
         <tr>
           <th>Nome Sorteio</th>
           <th>Descricão</th>
@@ -58,19 +62,9 @@ $sorteio = $verSorteio->exibirSorteioSelecionado(['id_sorteio']);
       </thead>
       <tbody>
           <tr>
-          td><?= $sorteio->getId() ?></td>
-            <td><?= $sorteio->getNome() ?></td>
-            <td><?= $sorteio->getDescricao() ?></td>
-            <td><?= $sorteio->getDataInicio()->format('Y-m-d H:i:s') ?></td> <!-- Convertendo DateTime para string -->
-            <td><?= $sorteio->getDatFim()->format('Y-m-d H:i:s') ?></td> <!-- Convertendo DateTime para string -->
-            <td><?= $sorteio->getStatus() ?></td>
-            <td><?= $sorteio->getN_de_rifas() ?></td>
+          <td><?= $_POST['id_sorteio'] ?> </td>
+            
             <td>
-            <form action="interagindo_sorteio.php" method="post" target="_blank">
-              <input type="hidden" name="id_sorteio" value="<?= $sorteio->exibirSorteioSelecionado($id_sorteio) ?>">
-              <button type="submit">Ir para sorteio</button>
-            </form>
-             <td>
             <form action="deletar_sorteio.php" method="post">
               <button type="submit">Deletar Sorteio</button>
             </fotm>
@@ -78,6 +72,9 @@ $sorteio = $verSorteio->exibirSorteioSelecionado(['id_sorteio']);
           </tr>
       </tbody>
     </table>
+    <?php else: ?>
+    <p>Sorteio não encontrado ou ID inválido.</p>
+<?php endif; ?>
    <a class="botao-cadastrar" href="cadastrar-produto.php">Place Holder</a>
    <form action="gerador-pdf.php" method="post">
   <input type="submit" class="botao-cadastrar" value="Place Holder"/>

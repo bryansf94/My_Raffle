@@ -39,13 +39,17 @@ class VerSorteio {
         return $dadosSorteio;
     }
 
-    public function exibirSorteioSelecionado(?int $id_sorteio)
+    public function exibirSorteioSelecionado(?int $id_sorteio): array 
     {
         $sql1 = "SELECT * FROM sorteio where id_sorteio = ?"; 
         $statement = $this->pdo->prepare($sql1);
-        $statement->bindValue(1,$id_sorteio);
-        $statement->execute();
+        $sorteios = $statement->fetchAll(PDO::FETCH_ASSOC);
 
+        $dadosSorteio2 = array_map(function ($sorteio) {
+            return $this->formarObjetoSorteio($sorteio);
+        }, $sorteios);
+
+        return $dadosSorteio2;
     }
 }
 ?>
