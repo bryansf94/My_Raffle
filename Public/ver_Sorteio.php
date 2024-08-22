@@ -17,6 +17,7 @@ $verSorteio = new VerSorteio($pdo);
 $sorteio = $verSorteio->exibirSorteios();
 
 
+
 ?>
 
 <!DOCTYPE html>
@@ -44,18 +45,21 @@ $sorteio = $verSorteio->exibirSorteios();
     <table>
       <thead>
         <tr>
+          <th>iD Sorteio</th>
           <th>Nome Sorteio</th>
           <th>Descricão</th>
           <th>Data inicio</th>
           <th>Data Fim</th>
           <th>Status</th>
           <th>Nº de Rifas</th>
-          <th>Iniciar Sorteio?</th>
+          <th>Ir para Sorteio?</th>
+          <th>Deletar Sorteio?</th>
         </tr>
       </thead>
       <tbody>
       <?php foreach ($sorteio as $sorteio): ?>
           <tr>
+            <td><?= $sorteio->getId() ?></td>
             <td><?= $sorteio->getNome() ?></td>
             <td><?= $sorteio->getDescricao() ?></td>
             <td><?= $sorteio->getDataInicio()->format('Y-m-d H:i:s') ?></td> <!-- Convertendo DateTime para string -->
@@ -63,9 +67,11 @@ $sorteio = $verSorteio->exibirSorteios();
             <td><?= $sorteio->getStatus() ?></td>
             <td><?= $sorteio->getN_de_rifas() ?></td>
             <td>
-            <form action="iniciar_sorteio.php" method="post">
-             <button type="submit">Iniciar Sorteio</button>
-             </form>
+            <form action="interagindo_sorteio.php" method="post" target="_blank">
+              <input type="hidden" name="id_sorteio" value="<?= $sorteio->getId() ?>">
+              <button type="submit">Ir para sorteio</button>
+            </form>
+             <td>
             </td>
           </tr>
       <?php endforeach; ?>

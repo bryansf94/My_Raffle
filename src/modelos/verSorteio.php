@@ -16,6 +16,7 @@ class VerSorteio {
     {
         return new Sorteio(
            
+            $dados['id_sorteio'],
             $dados['nome_sorteio'],
             $dados['descricao_sorteio'],
             new DateTime($dados['data_inicio']),
@@ -36,6 +37,19 @@ class VerSorteio {
         }, $sorteios);
 
         return $dadosSorteio;
+    }
+
+    public function exibirSorteioSelecionado(?int $id_sorteio): array 
+    {
+        $sql1 = "SELECT * FROM sorteio where id_sorteio = ?"; 
+        $statement = $this->pdo->prepare($sql1);
+        $sorteios = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+        $dadosSorteio2 = array_map(function ($sorteio) {
+            return $this->formarObjetoSorteio($sorteio);
+        }, $sorteios);
+
+        return $dadosSorteio2;
     }
 }
 ?>
