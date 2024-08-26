@@ -9,7 +9,7 @@ private ?DateTime $data_fim;
 private string $status;
 private ?int $n_de_rifas;
 
-public function __construct(int $id_sorteio, string $nome_sorteio, string $descricao_sorteio, ?DateTime $data_inicio, ?DateTime $data_fim, string $status, ?int $n_de_rifas)
+public function __construct(?int $id_sorteio, string $nome_sorteio, string $descricao_sorteio, ?DateTime $data_inicio, ?DateTime $data_fim, string $status, ?int $n_de_rifas)
 {
    
    $this->id_sorteio = $id_sorteio;

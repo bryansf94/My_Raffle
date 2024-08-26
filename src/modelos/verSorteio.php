@@ -39,7 +39,7 @@ class VerSorteio {
         return $dadosSorteio;
     }
 
-    public function exibirSorteioSelecionado(?int $id_sorteio): array 
+    public function exibirSorteioSelecionado(?int $id_sorteio) 
 {
     // Preparando a consulta SQL
     $sql1 = "SELECT * FROM sorteio WHERE id_sorteio = ?"; 
@@ -47,6 +47,7 @@ class VerSorteio {
     
     // Vinculando o parâmetro
     $statement->bindValue(1, $id_sorteio, PDO::PARAM_INT);
+    
     
     // Executando a consulta
     $statement->execute();
@@ -68,6 +69,10 @@ class VerSorteio {
     }, $sorteios);
 
     return $dadosSorteio2;
+    $result = $stmt->get_result();
+    
+    // Retorna os resultados como um array associativo
+    return $result->fetch_all(MYSQLI_ASSOC);
 }
 
 
