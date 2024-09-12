@@ -16,16 +16,10 @@ if ($pdo === null) {
 
 $verSorteioSelecionado = new VerSorteio($pdo);
 $verSorteioSelecionado->exibirSorteioSelecionado($_POST['id_sorteio'])->$result;
+  // Exibindo a tabela de sorteios
+  
 
 
-
-
-
-
-
-
-var_dump($verSorteioSelecionado);
-var_dump($_POST['id_sorteio']);
 
 
 
@@ -59,11 +53,10 @@ var_dump($_POST['id_sorteio']);
             </tr>
         </thead>
         <tbody>
-            <?php
-            foreach ($result as $row):?>
-            <td><?= $row['id_sorteio'] ?></td>
         
-              <?php endforeach; ?>
+            <php><?= $verSorteioSelecionado->exibirSorteioSelecionado(($_POST['id_sorteio']));?></php>
+        
+         
         </tbody>
     </table>
 </div>

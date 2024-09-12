@@ -39,42 +39,51 @@ class VerSorteio {
         return $dadosSorteio;
     }
 
-    public function exibirSorteioSelecionado(?int $id_sorteio) 
-{
-    // Preparando a consulta SQL
-    $sql1 = "SELECT * FROM sorteio WHERE id_sorteio = ?"; 
-    $statement = $this->pdo->prepare($sql1);
+    public function exibirSorteioSelecionado(?int $id_sorteio)
+    {
+        // Preparando a consulta SQL
+        $sql1 = "SELECT * FROM sorteio WHERE id_sorteio = ?";
+        $statement = $this->pdo->prepare($sql1);
     
-    // Vinculando o parâmetro
-    $statement->bindValue(1, $id_sorteio, PDO::PARAM_INT);
+        // Vinculando o parâmetro
+        $statement->bindValue(1, $id_sorteio, PDO::PARAM_INT);
     
+        // Executando a consulta
+        $statement->execute();
     
-    // Executando a consulta
-    $statement->execute();
-
-    // Verificando se há resultados
-    $sorteios = $statement->fetchAll(PDO::FETCH_ASSOC);
-    if (count($sorteios) > 0) {
-        // Exibindo os dados de cada sorteio
-        foreach ($sorteios as $row) {
-            echo "id: " . $row["id_sorteio"] . " - Nome: " . $row["nome_sorteio"] . "<br>";
+        // Verificando se há resultados
+        $sorteios = $statement->fetchAll(PDO::FETCH_ASSOC);
+        
+        if (count($sorteios) > 0) {
+            // Início da tabela HTML
+            $html = "<table border='1'>";
+            $html .= "<tr>";
+            $html .= "<th>ID</th>";
+            $html .= "<th>Nome</th>";
+            $html .= "<th>Descrição</th>";
+            $html .= "</tr>";
+    
+            // Exibindo os dados de cada sorteio
+            foreach ($sorteios as $row) {
+                $html .= "<tr>";
+                $html .= "<td>" . $row["id_sorteio"] . "</td>";
+                $html .= "<td>" . $row["nome_sorteio"] . "</td>";
+                $html .= "<td>" . $row["descricao_sorteio"] . "</td>";
+                $html .= "</tr>";
+            }
+    
+            // Fim da tabela HTML
+            $html .= "</table>";
+        } else {
+            $html = "Nenhum sorteio encontrado.";
         }
-    } else {
-        echo "0 resultados";
-    }
-
-    // Mapeando os resultados para objetos, se necessário
-    $dadosSorteio2 = array_map(function ($sorteio) {
-        return $this->formarObjetoSorteio($sorteio);
-    }, $sorteios);
-
-    return $dadosSorteio2;
-    $result = $stmt->get_result();
     
-    // Retorna os resultados como um array associativo
-    return $result->fetch_all(MYSQLI_ASSOC);
+        return $html;
+    }
+    
+
 }
 
 
-}
+
 ?>
