@@ -16,8 +16,6 @@ if ($pdo === null) {
 
 $verSorteioSelecionado = new VerSorteio($pdo);
 $verSorteioSelecionado->exibirSorteioSelecionado($_POST['id_sorteio'])->$result;
-  // Exibindo a tabela de sorteios
-  
 
 
 
@@ -55,6 +53,8 @@ $verSorteioSelecionado->exibirSorteioSelecionado($_POST['id_sorteio'])->$result;
         <tbody>
         
             <php><?= $verSorteioSelecionado->exibirSorteioSelecionado(($_POST['id_sorteio']));?></php>
+            <form action="gerador-pdf.php" method="post">
+            <input type="submit" class="botao-cadastrar" value="Place Holder"/>
         
          
         </tbody>

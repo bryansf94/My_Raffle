@@ -38,9 +38,6 @@ $sorteio = $verSorteio->exibirSorteios();
 </head>
 <body>
 <main>
- <section class="ver-sorteios-page">
-    <img src="img/logo-banner.png" class="container-logo" alt="logo-banner">
- </section>
  <section class="container-table">
     <table>
       <thead>

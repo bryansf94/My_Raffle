@@ -61,6 +61,10 @@ class VerSorteio {
             $html .= "<th>ID</th>";
             $html .= "<th>Nome</th>";
             $html .= "<th>Descrição</th>";
+            $html .= "<th>Data de inicio</th>";
+            $html .= "<th>Data de fim</th>";;
+            $html .= "<th>Status</th>";
+            $html .= "<th>n_de_rifas</th>";
             $html .= "</tr>";
     
             // Exibindo os dados de cada sorteio
@@ -69,6 +73,10 @@ class VerSorteio {
                 $html .= "<td>" . $row["id_sorteio"] . "</td>";
                 $html .= "<td>" . $row["nome_sorteio"] . "</td>";
                 $html .= "<td>" . $row["descricao_sorteio"] . "</td>";
+                $html .= "<td>" . $row["data_inicio"] . "</td>";
+                $html .= "<td>" . $row["data_fim"] . "</td>";
+                $html .= "<td>" . $row["status"] . "</td>";
+                $html .= "<td>" . $row["n_de_rifas"] . "</td>";
                 $html .= "</tr>";
             }
     

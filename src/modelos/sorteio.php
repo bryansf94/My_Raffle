@@ -52,7 +52,7 @@ public function getStatus(): string
     return $this->status;
 }
 
-public function getN_de_rifas(): ?int
+public function getN_de_rifas(): int
 {
     return $this->n_de_rifas;
 }
