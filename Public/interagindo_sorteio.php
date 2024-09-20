@@ -17,6 +17,9 @@ if ($pdo === null) {
 $verSorteioSelecionado = new VerSorteio($pdo);
 $verSorteioSelecionado->exibirSorteioSelecionado($_POST['id_sorteio'])->$result;
 
+$sortear = new VerSorteio($pdo);
+$sortear->realizarSorteio($_POST['id_sorteio'])->$result;
+
 
 
 

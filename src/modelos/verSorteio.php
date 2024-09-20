@@ -85,8 +85,51 @@ class VerSorteio {
         } else {
             $html = "Nenhum sorteio encontrado.";
         }
+        // guardando valores na variavel
     
         return $html;
+    }
+
+    public function realizarSorteio(?int $id_sorteio) {
+        // Preparando a consulta SQL
+        $sql1 = "SELECT * FROM sorteio WHERE id_sorteio = ?";
+        $statement = $this->pdo->prepare($sql1);
+    
+        // Vinculando o parâmetro
+        $statement->bindValue(1, $id_sorteio, PDO::PARAM_INT);
+    
+        // Executando a consulta
+        $statement->execute();
+    
+        // Verificando se há resultados
+        $sorteios = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+        // Grvando os valores dos campos do banco no BD
+
+        if (count($sorteios) > 0) {
+
+            foreach ($sorteios as $passandoValor) {
+                
+                $idVar = $passandoValor["id_sorteio"];
+                $nomeVar = $passandoValor["nome_sorteio"];
+                $descricaoVar = $passandoValor["scricao_sorteio"];
+                $dataIniVar = $passandoValor["data_inicio"];
+                $dataFimVar = $passandoValor["data_fim"];
+                $statusVar = $passandoValor["status"];
+                $rifasVar = $passandoValor["n_de_rifas"];
+            }
+            echo($idVar);
+            echo($nomeVar);
+            echo($descricaoVar);
+            echo($dataIniVar);
+            echo($dataFimVar);
+            echo($statusVar);
+            echo($rifasVar);
+            
+        } else {
+            echo("vazio");
+        }
+
     }
     
 
