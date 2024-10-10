@@ -117,14 +117,12 @@ class VerSorteio {
                 $dataFimVar = $passandoValor["data_fim"];
                 $statusVar = $passandoValor["status"];
                 $rifasVar = $passandoValor["n_de_rifas"];
+
+                echo($idVar);
+                echo($nomeVar);
+                
+
             }
-            echo($idVar);
-            echo($nomeVar);
-            echo($descricaoVar);
-            echo($dataIniVar);
-            echo($dataFimVar);
-            echo($statusVar);
-            echo($rifasVar);
             
         } else {
             echo("vazio");
